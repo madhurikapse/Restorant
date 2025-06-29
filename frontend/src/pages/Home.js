@@ -12,14 +12,17 @@ const Home = () => {
 
       {/* Overlay content */}
       <div className="overlay">
-  
-
         <h1>Welcome to Purva Resort & Farmhouse</h1>
         <p>Escape to tranquility — comfort, elegance, and natural beauty await you.</p>
+
         {/* Main resort image */}
         <img src="/assets/main.jpg" alt="Main Resort View" className="main-image" />
+      </div>
 
-        
+      {/* Additional Section with Heading */}
+      <div className="over1">
+        <h2 className="over1-heading">Discover Nature & Luxury Together</h2>
+        <img src="/assets/dd.jpg" alt="Resort Garden View" className="main-image1" />
       </div>
     </div>
   );
