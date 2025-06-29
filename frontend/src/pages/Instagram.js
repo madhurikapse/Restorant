@@ -7,13 +7,14 @@ const InstagramPage = () => {
       <div className="instagram-header">
         <h1>Follow Us on Instagram</h1>
         <p>@purvas_farm_and_resort</p>
+
         <a
-          href="https://www.instagram.com/purvas_farm_and_resort"
+          href="https://www.instagram.com/purvas_farm_and_resort?igsh=cHh2ZmUxeHhldDRo"
           target="_blank"
           rel="noopener noreferrer"
           className="instagram-button"
         >
-          👉 Visit Our Instagram
+          📸 Visit Our Instagram Profile
         </a>
       </div>
 

@@ -9,7 +9,7 @@ import Booking from "./pages/Booking";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import Footer from "./pages/Footer";
-import InstagramPage from "./pages/Instagram";
+import Instagram from "./pages/Instagram";
 import Vedio from "./pages/Vedio"
 import "./App.css";
 
@@ -28,8 +28,7 @@ function App() {
               <Rooms />
               <Contact />
               <Booking />
-              
-              <InstagramPage />
+              <Instagram/>
             </>
           }
         />
