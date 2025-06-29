@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../style/Booking.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Booking = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ const Booking = () => {
     guests: 1,
     roomType: "Deluxe Room",
   });
+
+  const [lastBooking, setLastBooking] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,8 +31,10 @@ const Booking = () => {
       });
 
       if (res.ok) {
-        alert("Booking submitted successfully!");
-        // Clear form after submission
+        toast.success("🎉 Booking submitted successfully!");
+        setLastBooking(formData); // You can use await res.json() if backend returns saved booking
+
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -39,10 +45,10 @@ const Booking = () => {
           roomType: "Deluxe Room",
         });
       } else {
-        alert("Booking failed!");
+        toast.error("❌ Booking failed!");
       }
     } catch (err) {
-      alert("Error submitting booking!");
+      toast.error("⚠️ Error submitting booking!");
       console.error(err);
     }
   };
@@ -114,6 +120,22 @@ const Booking = () => {
         </select>
         <button type="submit">Confirm Booking</button>
       </form>
+
+      {/* Toast container */}
+      <ToastContainer position="top-center" />
+
+      {/* Booking Summary */}
+      {lastBooking && (
+        <div className="booking-summary">
+          <h3>✅ Booking Summary</h3>
+          <p><strong>Name:</strong> {lastBooking.name}</p>
+          <p><strong>Room:</strong> {lastBooking.roomType}</p>
+          <p><strong>Guests:</strong> {lastBooking.guests}</p>
+          <p><strong>Check-in:</strong> {lastBooking.checkin}</p>
+          <p><strong>Check-out:</strong> {lastBooking.checkout}</p>
+          <p>📧 Confirmation sent to <strong>{lastBooking.email}</strong></p>
+        </div>
+      )}
     </div>
   );
 };

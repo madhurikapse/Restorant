@@ -1,0 +1,35 @@
+.videos-container {
+  padding: 40px;
+  background: #fff8f0;
+  text-align: center;
+}
+
+.videos-container h1 {
+  color: #8b0000;
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}

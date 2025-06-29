@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import bookingroutes from "./routes/bookingroutes.js";
+import subscribeRouter from './routes/subscribe.js';
+import adminRoutes from "./routes/adminroutes.js";
+import { sendBookingEmail } from "./utils/sendEmail.js";
 
 // Load env vars
 dotenv.config();
@@ -14,7 +17,9 @@ app.use(express.json());
 
 // Routes
 app.use("/api/bookings", bookingroutes);
+app.use("/api/admin", adminRoutes);
 
+app.use('/api/v1', subscribeRouter);      // All subscribe routes here
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)

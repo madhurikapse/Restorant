@@ -1,25 +1,64 @@
+/* Navbar Base Style */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
   padding: 15px 30px;
-  color: white;
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-size: 24px;
+/* Logo Image */
+.logo img {
+  height: 100px;
+  width: 160px;
+  object-fit: contain;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-direction: row; /* Force horizontal layout */
 }
 
 .nav-links a {
-  margin-left: 20px;
+  color: #ffffff;
   text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-  color: #e67e22;
+/* Active Link Style */
+.nav-links a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* ✅ Remove vertical layout on mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; /* Optional: center nav links below logo */
+  }
+
+  .nav-links {
+    flex-direction: row;  /* Stay horizontal */
+    flex-wrap: wrap;      /* Wrap to next line if too long */
+    justify-content: center;
+    gap:5px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
 }

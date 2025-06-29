@@ -1,3 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #FFF3E0; /* creamy peach */
+  color: #333;
+}
+
+.contact-container {
+  background-color: #FFFFFF;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #8B0000; /* dark red headings */
+}
+
+button {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a41e1e;
+}
+
 .App {
   text-align: center;
 }

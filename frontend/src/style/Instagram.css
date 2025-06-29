@@ -1,0 +1,62 @@
+.instagram-page {
+  padding: 40px;
+  background: #fffaf5;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.instagram-header h1 {
+  font-size: 36px;
+  color: #8b0000;
+  margin-bottom: 10px;
+}
+
+.instagram-header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.instagram-button {
+  display: inline-block;
+  background-color: #e1306c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-button:hover {
+  background-color: #c82361;
+}
+
+.highlight-section {
+  margin-top: 50px;
+}
+
+.highlight-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #8b0000;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.highlight-grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 200px;
+  transition: transform 0.3s;
+}
+
+.highlight-grid img:hover {
+  transform: scale(1.05);
+}
