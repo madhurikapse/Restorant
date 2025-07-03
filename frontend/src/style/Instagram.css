@@ -1,35 +1,39 @@
 .instagram-page {
-  padding: 40px;
-  background: #fffaf5;
+  padding: 40px 20px;
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.instagram-header {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  margin-bottom: 30px;
 }
 
 .instagram-header h1 {
-  font-size: 36px;
-  color: #8b0000;
+  font-size: 2rem;
+  color: #333;
   margin-bottom: 10px;
 }
 
 .instagram-header p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #444;
+  font-size: 1.1rem;
+  color: #666;
 }
 
 .instagram-button {
   display: inline-block;
+  padding: 12px 20px;
   background-color: #e1306c;
-  color: white;
-  padding: 12px 24px;
+  color: #fff;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  margin-top: 15px;
   transition: background-color 0.3s ease;
 }
 
 .instagram-button:hover {
-  background-color: #c82361;
+  background-color: #c92c61;
 }
 
 .highlight-section {
@@ -37,26 +41,41 @@
 }
 
 .highlight-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #8b0000;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
 }
 
 .highlight-grid img {
   width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  height: 200px;
-  transition: transform 0.3s;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-grid img:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-feed {
+  margin-top: 60px;
+}
+
+.instagram-feed h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.lightwidget-widget {
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

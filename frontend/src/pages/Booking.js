@@ -21,6 +21,23 @@ const Booking = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const sendWhatsAppMessage = (booking) => {
+    const message = `*New Booking Received!*\n
+Name: ${booking.name}\n
+Email: ${booking.email}\n
+Phone: ${booking.phone}\n
+Room: ${booking.roomType}\n
+Guests: ${booking.guests}\n
+Check-in: ${booking.checkin}\n
+Check-out: ${booking.checkout}`;
+
+
+    const phoneNumber = "917875636301"; // Replace with Owner's WhatsApp Number
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank"); // Open WhatsApp chat in new tab
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -32,9 +49,9 @@ const Booking = () => {
 
       if (res.ok) {
         toast.success("🎉 Booking submitted successfully!");
-        setLastBooking(formData); // You can use await res.json() if backend returns saved booking
+        setLastBooking(formData);
+        sendWhatsAppMessage(formData);  // Send WhatsApp Message to Owner
 
-        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -121,10 +138,8 @@ const Booking = () => {
         <button type="submit">Confirm Booking</button>
       </form>
 
-      {/* Toast container */}
       <ToastContainer position="top-center" />
 
-      {/* Booking Summary */}
       {lastBooking && (
         <div className="booking-summary">
           <h3>✅ Booking Summary</h3>
